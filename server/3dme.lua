@@ -5,7 +5,7 @@ AddEventHandler('jr-basics:server', function(text)
 	if Config.Logs.UseLogs then
 		local webhook = Config.Logs.ChatLog
 		local title = Config.Me.Title
-		local message = "**"..GetPlayerName(source) .. "** "..Config.Logs.Languages.Said.. " "..text..""
+		local message = "**"..GetPlayerName(source) .. "** "..Config.Me.Languages.Said.. " "..text..""
 
 		SendWebhookMessage(webhook, title, message, text, color)
 	end
