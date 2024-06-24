@@ -6,7 +6,7 @@ RegisterCommand('me', function(source, args)                                    
     end
 
     text = text .. ' * '
-    TriggerServerEvent('jr-basics:server', text)
+    TriggerServerEvent('jr-basics:Show', text)
 end)
 
 RegisterNetEvent('jr-basics:Display')
@@ -18,17 +18,6 @@ function Display(mePlayer, text)
     local displaying = true
     local coordsMe = GetEntityCoords(GetPlayerPed(mePlayer), false)
     local coords = GetEntityCoords(PlayerPedId(), false)
-    local dist = Vdist2(coordsMe, coords)
-
-    if chatMessage then
-        if dist < 2500 then
-            TriggerEvent('chat:addMessage', {
-                color = { color.r, color.g, color.b },
-                multiline = true,
-                args = { text}
-            })
-        end
-    end
 
     Citizen.CreateThread(function()
     	Wait(Config.Me.DisplayTime)
