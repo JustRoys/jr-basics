@@ -1,5 +1,5 @@
-RegisterServerEvent('jr-basics:server')
-AddEventHandler('jr-basics:server', function(text)
+RegisterServerEvent('jr-basics:Show')
+AddEventHandler('jr-basics:Show', function(text)
 	TriggerClientEvent('jr-basics:Display', -1, text, source)
 
 	if Config.Logs.UseLogs then
