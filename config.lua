@@ -1,5 +1,7 @@
 Config = {}
 
+Config.CommandDeleteVehicle = "dv" -- Delete Vehicle or mounted horse
+
 Config.SwimMexico = false       -- If set to true you can safely swim across to mexico. You can also go by boat (won't break)
 
 -- Change the water in Guarma
