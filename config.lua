@@ -12,6 +12,11 @@ Config.GuarmaWater = {
     WaveSpeed = 1.86,           -- wave animation speed
 }
 
+Config.Animations = {
+    HandsUp = 0x8CC9CD42, -- X
+    Pointing = 0x80F28E95 -- B
+}
+
 -- Disable Default RDR2 Prompts
 -- If set to false it will be disabled
 Config.Prompts = {
