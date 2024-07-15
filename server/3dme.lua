@@ -1,6 +1,6 @@
-RegisterServerEvent('jr-basics:Show')
-AddEventHandler('jr-basics:Show', function(text)
-	TriggerClientEvent('jr-basics:Display', -1, text, source)
+RegisterServerEvent('jr-basics:shareDisplay')
+AddEventHandler('jr-basics:shareDisplay', function(text)
+	TriggerClientEvent('jr-basics:triggerDisplay', -1, text, source)
 
 	if Config.Logs.UseLogs then
 		local webhook = Config.Logs.ChatLog

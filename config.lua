@@ -17,6 +17,14 @@ Config.Animations = {
     Pointing = 0x80F28E95 -- B
 }
 
+-- Disable Default RDR2 Flags
+-- If set to true it will be disabled
+Config.Disable = {
+    HorseKick = true,
+    --SittingScenario = false,
+    --RestingScenario = false,
+}
+
 -- Disable Default RDR2 Prompts
 -- If set to false it will be disabled
 Config.Prompts = {
@@ -31,6 +39,7 @@ Config.Prompts = {
 
 -- Me Command
 Config.Me = {
+    Command = "me",
     DisplayTime = 7000,         -- Time in ms to show ME commands
     Title = "💭 /ME",          -- This is the title for the logs
 
