@@ -8,7 +8,7 @@ AddEventHandler("jr-basics:PlayerDied", function(msg, Weapon)
     local message
 
     if Weapon ~= nil then
-        message = msg.." "..Config.Logs.Languages.Weapon.. " ***"..Weapon.."*** "
+        message = msg.." "..Config.Languages.Weapon.. " ***"..Weapon.."*** "
     else
         message = msg.." "
     end
@@ -22,7 +22,7 @@ AddEventHandler('playerJoining', function(reason)
     local title = Config.Logs.Title.Join
 
     Player_Details = GetPlayerDetails(source)
-    message = "***"..GetPlayerName(source) .. "*** "..Config.Logs.Languages.Joining.." "..Player_Details
+    message = "***"..GetPlayerName(source) .. "*** "..Config.Languages.Joining.." "..Player_Details
 
     SendWebhookMessage(webhook, title, message, text, color)
 
@@ -32,7 +32,7 @@ AddEventHandler('playerJoining', function(reason)
         local title2 = Config.Logs.Title.Join
 
         Player_Details = GetPlayerDetails2(source)
-        message = "***"..GetPlayerName(source) .. "*** "..Config.Logs.Languages.Joining.." "..Player_Details
+        message = "***"..GetPlayerName(source) .. "*** "..Config.Languages.Joining.." "..Player_Details
 
         SendWebhookMessage(webhook2, title2, message, text, color)
     end
@@ -51,7 +51,7 @@ AddEventHandler('playerDropped', function(reason)
         local title = Config.Logs.Title.Leave
 
         Player_Details = GetPlayerDetails(source)
-        message = "***"..GetPlayerName(source) .. "*** "..Config.Logs.Languages.Leaving.." "..reason.. "("..Config.Logs.Languages.LeftWhileDead..") \n"..Player_Details
+        message = "***"..GetPlayerName(source) .. "*** "..Config.Languages.Leaving.." "..reason.. "("..Config.Languages.LeftWhileDead..") \n"..Player_Details
 
         SendWebhookMessage(webhook, title, message, text, color)
 
@@ -61,7 +61,7 @@ AddEventHandler('playerDropped', function(reason)
             local title2 = Config.Logs.Title.Leave
 
             Player_Details2 = GetPlayerDetails2(source)
-            message = "***"..GetPlayerName(source) .. "*** "..Config.Logs.Languages.Leaving.." "..reason.. "("..Config.Logs.Languages.LeftWhileDead..") \n"..Player_Details2
+            message = "***"..GetPlayerName(source) .. "*** "..Config.Languages.Leaving.." "..reason.. "("..Config.Languages.LeftWhileDead..") \n"..Player_Details2
 
             SendWebhookMessage(webhook2, title2, message, text, color)
         end
@@ -72,7 +72,7 @@ AddEventHandler('playerDropped', function(reason)
         local title = Config.Logs.Title.Leave
 
         Player_Details = GetPlayerDetails(source)
-        message = "***"..GetPlayerName(source) .. "*** "..Config.Logs.Languages.Leaving.." "..reason.. " \n"..Player_Details
+        message = "***"..GetPlayerName(source) .. "*** "..Config.Languages.Leaving.." "..reason.. " \n"..Player_Details
 
         SendWebhookMessage(webhook, title, message, text, color)
 
@@ -82,7 +82,7 @@ AddEventHandler('playerDropped', function(reason)
             local title2 = Config.Logs.Title.Leave
 
             Player_Details2 = GetPlayerDetails2(source)
-            message = "***"..GetPlayerName(source) .. "*** "..Config.Logs.Languages.Leaving.." "..reason.. " \n"..Player_Details2
+            message = "***"..GetPlayerName(source) .. "*** "..Config.Languages.Leaving.." "..reason.. " \n"..Player_Details2
 
             SendWebhookMessage(webhook2, title2, message, text, color)
         end
@@ -127,7 +127,7 @@ function GetPlayerDetails(source)
     else
         _steamID = ""
         _steamURL = ""
-        print(Config.Logs.Languages.ApiKey)
+        print(Config.Languages.ApiKey)
     end
 
 	if Config.Logs.License then
@@ -190,7 +190,7 @@ function GetPlayerDetails2(source)
     else
         _steamID = ""
         _steamURL = ""
-        print(Config.Logs.Languages.ApiKey)
+        print(Config.Languages.ApiKey)
     end
 
 	if Config.Logs.License then

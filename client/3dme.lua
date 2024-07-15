@@ -1,11 +1,13 @@
-RegisterCommand(Config.Me.Command, function(source, args)                                                       -- Set the command that you want to use /me / example: RegisterCommand('NEWCOMMAND', function(source, args)   
-    local text = '*'
-    for i = 1,#args do
-        text = text .. ' ' .. args[i]
-    end
-    text = text .. ' * '
-    TriggerServerEvent('jr-basics:shareDisplay', text)
-end)
+if Config.Commands.Me.Enable then
+    RegisterCommand(Config.Commands.Me.Command, function(source, args)                                                       -- Set the command that you want to use /me / example: RegisterCommand('NEWCOMMAND', function(source, args)   
+        local text = '*'
+        for i = 1,#args do
+            text = text .. ' ' .. args[i]
+        end
+        text = text .. ' * '
+        TriggerServerEvent('jr-basics:shareDisplay', text)
+    end)
+end
 
 RegisterNetEvent('jr-basics:triggerDisplay')
 AddEventHandler('jr-basics:triggerDisplay', function(text, source)
@@ -16,9 +18,10 @@ function Display(mePlayer, text)
     local displaying = true
 
     Citizen.CreateThread(function()
-    	Wait(Config.Me.DisplayTime)
+    	Wait(Config.Commands.Me.DisplayTime)
         displaying = false
     end)
+
     Citizen.CreateThread(function()
         while displaying do
             Wait(0)

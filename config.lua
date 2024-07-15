@@ -1,30 +1,5 @@
 Config = {}
 
-Config.CommandDeleteVehicle = "dv" -- Delete Vehicle or mounted horse
-
-Config.SwimMexico = false       -- If set to true you can safely swim across to mexico. You can also go by boat (won't break)
-
--- Change the water in Guarma
-Config.GuarmaWater = {
-    Use = true,                 -- Set false if you don't want to use this function
-    WaveDirection = 0,          -- 1 and 2 
-    WaveAmount = 1.28,          -- amount of waves
-    WaveSpeed = 1.86,           -- wave animation speed
-}
-
-Config.Animations = {
-    HandsUp = 0x8CC9CD42, -- X
-    Pointing = 0x80F28E95 -- B
-}
-
--- Disable Default RDR2 Flags
--- If set to true it will be disabled
-Config.Disable = {
-    HorseKick = true,
-    --SittingScenario = false,
-    --RestingScenario = false,
-}
-
 -- Disable Default RDR2 Prompts
 -- If set to false it will be disabled
 Config.Prompts = {
@@ -37,14 +12,48 @@ Config.Prompts = {
     MountHorse = true,          -- Mount horses
 }
 
--- Me Command
-Config.Me = {
-    Command = "me",
-    DisplayTime = 7000,         -- Time in ms to show ME commands
-    Title = "💭 /ME",          -- This is the title for the logs
+-- Disable Default RDR2 Flags
+-- If set to true it will be disabled
+Config.Disable = {
+    HorseKick = false,
+    DoorBarge = false,
+    SittingScenario = false,
+    RestingScenario = false,
+}
 
-    Languages = {
-        Said = "said:"
+-- Change the water in Guarma
+Config.GuarmaWater = {
+    Use = true,                 -- Set false if you don't want to use this function
+    WaveDirection = 0,          -- 1 and 2 
+    WaveAmount = 1.28,          -- amount of waves
+    WaveSpeed = 1.86,           -- wave animation speed
+}
+
+Config.SwimMexico = false       -- If set to true you can safely swim across to mexico. You can also go by boat (won't break)
+
+Config.Animations = {
+    HandsUp = {
+        Enable = true,
+        Button = 0x8CC9CD42, -- X
+    },
+    Pointing = {
+        Enable = true,
+        Button = 0x80F28E95 -- B
+    }
+}
+
+-- Commands
+Config.Commands = {
+    Me = { -- Me command
+        Enable = true,                      -- set false to disable it
+        Command = "me",
+        DisplayTime = 7000,                 -- Time in ms to show ME commands
+        Title = "💭 /ME",                   -- This is the title for the logs
+    },
+    DeleteVehicle = {                       -- Delete Vehicle or mounted horse
+        Enable = true,                      -- set false to disable it
+        Command = "dv",
+        --Access = {'admin', 'moderator'}     -- group that have access to this command
     }
 }
 
@@ -76,12 +85,13 @@ Config.Logs = {
     LeavingModLog = "",         -- Leave logs wihtout IP
     DeathLog = "",
     ChatLog = "",
+}
 
-    Languages = {
-        Joining = "is Joining",
-        Leaving = "is leaving. Reason:",
-        LeftWhileDead = "Left the server while dead",
-        Weapon = "Weapon:",
-        ApiKey = "You need to set a steam api key in your server.cfg for the steam identifiers to work!"
-    }
+Config.Languages = {
+    Said = "said:",
+    Joining = "is Joining",
+    Leaving = "is leaving. Reason:",
+    LeftWhileDead = "Left the server while dead",
+    Weapon = "Weapon:",
+    ApiKey = "You need to set a steam api key in your server.cfg for the steam identifiers to work!"
 }

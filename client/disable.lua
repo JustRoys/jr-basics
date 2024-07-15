@@ -10,6 +10,10 @@ Citizen.CreateThread(function()
             end
         end
 
+        if Config.Disable.DoorBarge then
+            SetPedConfigFlag(playerPed, 445, true)
+        end
+
         if Config.Disable.SittingScenario then
             SetPedConfigFlag(playerPed, 472, true)
         end
