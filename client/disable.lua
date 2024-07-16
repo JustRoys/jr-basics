@@ -6,7 +6,7 @@ Citizen.CreateThread(function()
 
         if Config.Disable.HorseKick then
             if DoesEntityExist(horse) then
-                SetPedConfigFlag(Horse, 471, true)
+                SetPedConfigFlag(horse, 471, true)
             end
         end
 
@@ -20,6 +20,28 @@ Citizen.CreateThread(function()
 
         if Config.Disable.RestingScenario then
             SetPedConfigFlag(playerPed, 474, true)
+        end
+
+        if Config.Disable.HorseGunshotFlee then
+            if DoesEntityExist(horse) then
+                SetPedConfigFlag(horse, 312, true)
+            end
+        end
+
+        if Config.Disable.InjuredMovement then
+            SetPedConfigFlag(playerPed, 584, true)
+        end
+
+        if Config.Disable.WeaponDegradation then
+            SetPedConfigFlag(playerPed, 361, true)
+        end
+
+        if Config.Disable.ForceDismountLeft then
+            SetPedConfigFlag(playerPed, 341, true)
+        end
+
+        if Config.Disable.ForceDismountRight then
+            SetPedConfigFlag(playerPed, 342, true)
         end
     end
 end)

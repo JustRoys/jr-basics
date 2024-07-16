@@ -15,10 +15,15 @@ Config.Prompts = {
 -- Disable Default RDR2 Flags
 -- If set to true it will be disabled
 Config.Disable = {
-    HorseKick = false,
-    DoorBarge = false,
-    SittingScenario = false,
-    RestingScenario = false,
+    HorseKick = false,          -- Disable horrse kicks
+    DoorBarge = false,          -- Disable Door barges
+    SittingScenario = false,    -- Disable sitting scenario
+    RestingScenario = false,    -- Disable sitting scenario's
+    HorseGunshotFlee = false,    -- Horses don't flee after gunshots
+    InjuredMovement = false,     -- Disable injured movement
+    WeaponDegradation = false,   -- Disable weapon degradation
+    ForceDismountLeft = false,   -- Force to dismount on the left side
+    ForceDismountRight = false, -- Force to dismount on the right side
 }
 
 -- Change the water in Guarma
