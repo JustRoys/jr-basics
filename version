@@ -1,0 +1,13 @@
+<1.3>
+- Added more configs to enable
+- Added doorbarge
+- Made config cleaner
+- Changed Languages to 1 config
+<1.2>
+- Blips
+It is now possible to add more blips to your map. 
+Add the blips in blips.lua
+<1.1>
+- Handsup
+- Pointing
+<1.0>
