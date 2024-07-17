@@ -26,6 +26,14 @@ Config.Disable = {
     ForceDismountRight = false, -- Force to dismount on the right side
 }
 
+-- Traffic
+Config.Traffic = {
+    PedTraffic = 1,
+    PedFrequency = 1,
+    AnimalFrequency = 1,
+    TrafficFrequency = 1,
+}
+
 -- Change the water in Guarma
 Config.GuarmaWater = {
     Use = true,                 -- Set false if you don't want to use this function
@@ -36,6 +44,7 @@ Config.GuarmaWater = {
 
 Config.SwimMexico = false       -- If set to true you can safely swim across to mexico. You can also go by boat (won't break)
 
+-- Animations
 Config.Animations = {
     HandsUp = {
         Enable = true,
