@@ -28,6 +28,7 @@ Config.Disable = {
 
 -- Traffic
 Config.Traffic = {
+    Enable = true,
     PedTraffic = 1,
     PedFrequency = 1,
     AnimalFrequency = 1,
