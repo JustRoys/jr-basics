@@ -6,7 +6,9 @@ JR-Basics is not fully completed, some more things will be published now and the
 
 > [!NOTE]
 > These scripts are included :
+>
 > https://github.com/outsider31000/ability_card?tab=readme-ov-file
+>
 > Vorp_traffic
 >
 > Make sure these scripts are not insured
