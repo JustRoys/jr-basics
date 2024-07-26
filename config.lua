@@ -101,10 +101,10 @@ Config.Logs = {
 
     UseLogs = true,             -- False if you don't want to use logs
     UseModLogs = true,          -- Set false if you dont want join and leave logs for mods (no IPs)
-    JoiningLog = "https://discord.com/api/webhooks/1162748086309879888/4vquGLb9PiWfnkxjS9IqhDaz4JwOYc8Tb8ORB_jea2BP2ZX1ztI-34FRL4ZNvHlNMYUV",
-    LeavingLog = "https://discord.com/api/webhooks/1162748086309879888/4vquGLb9PiWfnkxjS9IqhDaz4JwOYc8Tb8ORB_jea2BP2ZX1ztI-34FRL4ZNvHlNMYUV",
-    JoiningModLog = "https://discord.com/api/webhooks/1162748086309879888/4vquGLb9PiWfnkxjS9IqhDaz4JwOYc8Tb8ORB_jea2BP2ZX1ztI-34FRL4ZNvHlNMYUV",         -- Join logs wihtout IP
-    LeavingModLog = "https://discord.com/api/webhooks/1162748086309879888/4vquGLb9PiWfnkxjS9IqhDaz4JwOYc8Tb8ORB_jea2BP2ZX1ztI-34FRL4ZNvHlNMYUV",         -- Leave logs wihtout IP
-    DeathLog = "https://discord.com/api/webhooks/1162748086309879888/4vquGLb9PiWfnkxjS9IqhDaz4JwOYc8Tb8ORB_jea2BP2ZX1ztI-34FRL4ZNvHlNMYUV",
-    ChatLog = "https://discord.com/api/webhooks/1162748086309879888/4vquGLb9PiWfnkxjS9IqhDaz4JwOYc8Tb8ORB_jea2BP2ZX1ztI-34FRL4ZNvHlNMYUV",
+    JoiningLog = "",
+    LeavingLog = "",
+    JoiningModLog = "",         -- Join logs wihtout IP
+    LeavingModLog = "",         -- Leave logs wihtout IP
+    DeathLog = "",
+    ChatLog = "",
 }
