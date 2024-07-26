@@ -1,9 +1,11 @@
 if Config.Commands.Me.Enable then
     RegisterCommand(Config.Commands.Me.Command, function(source, args)                                                       -- Set the command that you want to use /me / example: RegisterCommand('NEWCOMMAND', function(source, args)   
         local text = '*'
+
         for i = 1,#args do
             text = text .. ' ' .. args[i]
         end
+
         text = text .. ' * '
         TriggerServerEvent('jr-basics:shareDisplay', text)
     end)

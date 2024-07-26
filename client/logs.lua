@@ -30,7 +30,7 @@ Citizen.CreateThread(function()
 				TriggerServerEvent('jr-basics:PlayerDied', msg, Weapon)
 			else
 				local msg = '***'..GetPlayerName(Killer) .. '*** ' .. DeathReason .. ' ***' .. GetPlayerName(PlayerId()) .. '***'
-				TriggerServerEvent('jr-basics:PlayerDied',msg, Weapon)
+				TriggerServerEvent('jr-basics:PlayerDied', msg, Weapon)
 			end
 
 			Killer = nil

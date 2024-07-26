@@ -1,4 +1,5 @@
 local pointing = false
+local ragdoll = false
 
 -- Handsup
 if Config.Animations.HandsUp.Enable then
@@ -54,3 +55,34 @@ if Config.Animations.Pointing.Enable then
         end
     end)
 end
+
+-- Ragdoll
+if Config.Animations.Ragdoll.Enable then
+    Citizen.CreateThread(function()
+        while true do
+            Citizen.Wait(0)
+            if IsControlPressed(0, Config.Animations.Ragdoll.Button) then
+                if Config.Animations.Ragdoll.Stay then
+                    if not ragdoll then
+                        ragdoll = true
+                        SetPedToRagdoll(PlayerPedId(), 1000, 1000, 0, 0, 0, 0)
+                    else
+                        ragdoll = false
+                    end
+                    Citizen.Wait(200)
+                else
+                    SetPedToRagdoll(PlayerPedId(), -1, -1, 0, 0, 0, 0)
+                end
+            end
+        end
+    end)
+end
+
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(10)
+        if ragdoll then
+            ResetPedRagdollTimer(PlayerPedId())
+        end
+    end
+end)
