@@ -17,5 +17,13 @@ Translation.Langs = {
         Weapon = "Wapen:",
         ApiKey = "Je moet een Steam API-sleutel instellen in je server.cfg om de Steam-identificatoren te laten werken!"
     },
+    German = {
+        Said = "sagt:",
+        Joining = "betritt den Server",
+        Leaving = "verlässt den Server. Grund:",
+        LeftWhileDead = "!!!Combat-Log!!!",
+        Weapon = "Waffe:",
+        ApiKey = "Du brauchst in der server.cfg einen eingetragenen Steam api-key!"
+    },
     -- Add more languages here, please contribute if you made a new language! :)
 }
