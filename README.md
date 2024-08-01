@@ -1,4 +1,6 @@
 # JR-Basics
+![jrwash](https://i.imgur.com/kx5F9F0.png)
+
 JR-Basics are simple and small resources to have in your server to enable or disable certain thing like default RDR2 prompts, changing Guarma water, some default joining and leaving logs (and some more logs) and much more!
 
 JR-Basics is not fully completed, some more things will be published now and then.
