@@ -76,8 +76,8 @@ Config.Commands = {
     DeleteVehicle = {                           -- Delete Vehicle or mounted horse
         Enable = true,                          -- set false to disable it
         Command = "dv",                         -- Command to delete vehicle
-        --AccessAnyone = true,                    -- Set true if you want everyone to have access to this command, if false only the groups in AllowedGroups will have access
-        --AllowedGroups = {'admin', 'moderator'}  -- Group(s) that have access to this command
+        AccessAnyone = false,                    -- Set true if you want everyone to have access to this command, if false only the groups in AllowedGroups will have access
+        AllowedGroups = {'admin', 'moderator'}  -- Group(s) that have access to this command
     }
 }
 
