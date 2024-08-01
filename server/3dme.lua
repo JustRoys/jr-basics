@@ -4,9 +4,9 @@ RegisterServerEvent('jr-basics:shareDisplay')
 AddEventHandler('jr-basics:shareDisplay', function(text)
 	TriggerClientEvent('jr-basics:triggerDisplay', -1, text, source)
 
-	if Config.Logs.UseLogs then
-		local webhook = Config.Logs.ChatLog
-		local title = Config.Commands.Me.Title
+	if Config.Logs.Enable then
+		local webhook = Config.Logs.Webhooks.ChatLog
+		local title = T.Titles.Me
 		local message = "**"..GetPlayerName(source) .. "** "..T.Said.. " "..text..""
 
 		SendWebhookMessage(webhook, title, message, text, color)

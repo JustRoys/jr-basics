@@ -1,39 +1,52 @@
--- Delete Vehicle or mounted horse
-if Config.Commands.DeleteVehicle.Enable then
-    RegisterCommand(Config.Commands.DeleteVehicle.Command, function()
-        local playerPed = PlayerPedId()
-        local vehicle   = GetVehiclePedIsIn(playerPed, false)
-        local mount   = GetMount(PlayerPedId())
+local Core = exports.vorp_core:GetCore()
 
-        if IsPedInAnyVehicle(playerPed, true) then
-            vehicle = GetVehiclePedIsIn(playerPed, false)
-        end
-
-        if DoesEntityExist(vehicle) then
-            DeleteVehicle(vehicle)
-        end
-
-        if IsPedOnMount(playerPed) then
-            DeleteEntity(mount)
-        end
-    end)
-end
-
---[[ RegisterNetEvent("jr-basics:remove")
-AddEventHandler("jr-basics:remove", function()
+function RemoveVehicle()
     local playerPed = PlayerPedId()
-    local vehicle   = GetVehiclePedIsIn(playerPed, false)
-    local mount   = GetMount(PlayerPedId())
+    local Vehicle = GetVehiclePedIsIn(playerPed, false)
+    local Mount = GetMount(PlayerPedId())
 
     if IsPedInAnyVehicle(playerPed, true) then
-        vehicle = GetVehiclePedIsIn(playerPed, false)
+        Vehicle = GetVehiclePedIsIn(playerPed, false)
     end
 
-    if DoesEntityExist(vehicle) then
-        DeleteVehicle(vehicle)
+    if DoesEntityExist(Vehicle) then
+        DeleteVehicle(Vehicle)
     end
 
     if IsPedOnMount(playerPed) then
-        DeleteEntity(mount)
+        DeleteEntity(Mount)
     end
-end) ]]
+end
+
+-- Delete Vehicle or mounted horse
+if Config.Commands.DeleteVehicle.Enable then
+    RegisterCommand(Config.Commands.DeleteVehicle.Command, function(source)
+--[[         local _source = source
+        local User = Core.getUser(_source)
+        local Character = User.getUsedCharacter
+
+        if not User then
+            return
+        end
+
+        if Config.Commands.DeleteVehicle.AccessAnyone == false then
+            if Character and Character.group and HasPermission(Config.Commands.DeleteVehicle.AllowedGroups, Character.group) then
+                RemoveVehicle()
+            else
+                TriggerClientEvent('vorp:NotifyLeft', source, 'Mission', Config.Locale.accessDenied, 'menu_textures', 'stamp_locked', 5000)
+            end
+        else ]]
+            RemoveVehicle()
+        --end
+
+    end, false)
+end
+
+--[[ function HasPermission(tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+        end
+    end
+    return false
+end ]]
