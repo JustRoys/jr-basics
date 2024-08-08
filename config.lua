@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Language = "English"             -- English, Dutch
+Config.Language = "English"             -- English, Dutch, German
 
 -- Disable Default RDR2 Prompts
 -- If set to false it will be disabled
