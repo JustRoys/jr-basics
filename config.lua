@@ -29,8 +29,9 @@ Config.Disable = {
 }
 
 -- Traffic
+-- Must be a float type below 1.0, for example 0.9
 Config.Traffic = {
-    Enable = true,
+    Enable = false,
     PedTraffic = 1,
     PedFrequency = 1,
     AnimalFrequency = 1,
