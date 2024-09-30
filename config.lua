@@ -32,10 +32,10 @@ Config.Disable = {
 -- Must be a float type below 1.0, for example 0.9
 Config.Traffic = {
     Enable = false,
-    PedTraffic = 1,
-    PedFrequency = 1,
-    AnimalFrequency = 1,
-    TrafficFrequency = 1,
+    PedTraffic = 1.0,
+    PedFrequency = 1.0,
+    AnimalFrequency = 1.0,
+    TrafficFrequency = 1.0,
 }
 
 -- Change the water in Guarma
